@@ -24,10 +24,9 @@ const displayBooks = books =>{
          console.log(book.id);
         const bookCard = document.createElement('div');
         bookCard.className=`book-card`;
-        bookCard.innerHTML=`<img src=${book?.formats?.
-            image/jpeg} alt="Book Image">
+        bookCard.innerHTML=`
                 <h3>${book.title}</h3>
-                <p>Author: Author Name</p>
+                <p>Author: ${book.id}</p>
                 <p>Summary of the book goes here.</p>`;
                 bookContainer.appendChild(bookCard);
     });
