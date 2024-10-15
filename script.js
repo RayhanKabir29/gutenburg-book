@@ -18,13 +18,13 @@ async function fetchBooks() {
 
 
 const displayBooks = books =>{
-     console.log(books);
+    
     const bookContainer = document.getElementById('book-grid')
     books.forEach(book => {
          console.log(book.id);
         const bookCard = document.createElement('div');
         bookCard.className=`book-card`;
-        bookCard.innerHTML=`
+        bookCard.innerHTML=` <img src=${book.formats["image/jpeg"]} />
                 <h3>${book.title}</h3>
                 <p>Author: ${book.id}</p>
                 <p>Summary of the book goes here.</p>`;
