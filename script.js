@@ -13,11 +13,13 @@ function displayBooks(books) {
     books.forEach(book => {
         const bookItem = document.createElement('div');
         bookItem.className = 'book-item';
-        bookItem.innerHTML = `
-         <img src=${book?.formats["image/jpeg"]} />
+        bookItem.innerHTML = `<a href="/book-details.html">
+            <img src=${book.formats["image/jpeg"]} />
             <h3>${book?.title}</h3>
             <p>${book?.authors?.map(author => author?.name)?.join(', ')}</p>
             <button class="wishlist-btn" data-id="${book?.id}">❤️</button>
+            </a>
+         
         `;
         bookList.appendChild(bookItem);
     });
