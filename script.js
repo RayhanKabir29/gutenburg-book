@@ -13,7 +13,7 @@ function displayBooks(books) {
     books.forEach(book => {
         const bookItem = document.createElement('div');
         bookItem.className = 'book-item';
-        bookItem.innerHTML = `<a href="/book-details.html">
+        bookItem.innerHTML = `<a href="/book-details.html/${book?.id}">
             <img src=${book.formats["image/jpeg"]} />
             <h3>${book?.title}</h3>
             <p>${book?.authors?.map(author => author?.name)?.join(', ')}</p>
